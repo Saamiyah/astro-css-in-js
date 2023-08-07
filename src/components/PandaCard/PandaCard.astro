@@ -1,0 +1,12 @@
+---
+import { Card, Img, Title, Summary, Link } from "./PandaCard";
+
+const { article, articleType } = Astro.props;
+---
+
+<div class={Card}>
+  <img class={Img} src={article.imageUrl} />
+  <h2 class={Title}>{article.title}</h2>
+  <p class={Summary}>{article.summary}</p>
+  <a class={Link} href={`/${articleType}/${article.id}`}></a>
+</div>

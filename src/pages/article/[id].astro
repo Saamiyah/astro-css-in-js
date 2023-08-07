@@ -1,0 +1,60 @@
+---
+import {
+  Title,
+  Wrapper,
+  Content,
+  Img,
+  SummaryContainer,
+  Summary,
+} from "../shared/pandaStyles";
+
+const { id } = Astro.params;
+
+const articleResponse = await fetch(
+  `https://api.spaceflightnewsapi.net/v3/articles/${id}`
+);
+
+const articleData = await articleResponse.json();
+---
+
+<div class={Wrapper}>
+  <h1 class={Title}>{articleData.title}</h1>
+  <h2>{articleData.newsSite}</h2>
+  <div class={Content}>
+    <img class={Img} src={articleData.imageUrl} alt="News" />
+    <div class={SummaryContainer}>
+      <p class={Summary}>{articleData.summary}</p>
+    </div>
+  </div>
+</div>
+
+<!-- ---
+import {
+  StyledWrapper,
+  StyledTitle,
+  StyledNewsSite,
+  StyledContent,
+  StyledImg,
+  StyledSummaryContainer,
+  StyledSummary,
+} from "../shared/styles";
+
+const { id } = Astro.params;
+
+const articleResponse = await fetch(
+  `https://api.spaceflightnewsapi.net/v3/articles/${id}`
+);
+
+const articleData = await articleResponse.json();
+---
+
+<StyledWrapper>
+  <StyledTitle>{articleData.title}</StyledTitle>
+  <>{articleData.newsSite}</>
+  <StyledContent>
+    <StyledImg src={articleData.imageUrl} alt="News" />
+    <StyledSummaryContainer>
+      <StyledSummary>{articleData.summary}</StyledSummary>
+    </StyledSummaryContainer>
+  </StyledContent>
+</StyledWrapper> -->

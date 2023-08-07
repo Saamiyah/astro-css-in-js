@@ -1,0 +1,17 @@
+<!-- ---
+import {
+  StyledCard,
+  StyledImg,
+  StyledLink,
+  StyledSummary,
+  StyledTitle,
+} from "../Card/Card.styles";
+const { article, articleType } = Astro.props;
+---
+
+<StyledCard>
+  <StyledImg src={article.imageUrl} class="img" />
+  <StyledTitle>{article.title}</StyledTitle>
+  <StyledSummary>{article.summary}</StyledSummary>
+  <StyledLink href={`/${articleType}/${article.id}`} />
+</StyledCard> -->
