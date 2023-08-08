@@ -1,7 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/PandaCard/PandaCard.astro";
-import { ArticleContainer, Container, Reports, Title, Text } from ".";
+import {
+  ArticleContainer,
+  Container,
+  Reports,
+  Title,
+  Text,
+} from "../styles/index";
+import "../styles/index.css";
 
 // import { theme } from ".././styles/theme";
 // import {
@@ -103,6 +110,3 @@ const reports = reportData.slice(0, 20);
     </StyledContainer>
   </main>
 </Layout> --><!-- </ThemeProvider> -->
-<style>
-  @layer reset, base, tokens, recipes, utilities;
-</style>

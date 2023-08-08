@@ -2,12 +2,11 @@
 import {
   Title,
   Wrapper,
-  Content,
   Img,
+  Content,
   SummaryContainer,
   Summary,
-} from "../shared/pandaStyles";
-
+} from "../../styles/shared/pandaStyles";
 const { id } = Astro.params;
 
 const res = await fetch(`https://api.spaceflightnewsapi.net/v3/reports/${id}`);
@@ -53,5 +52,5 @@ const reports = await res.json();
       <StyledSummary>{reports.summary}</StyledSummary>
     </StyledSummaryContainer>
   </StyledContent>
-</StyledWrapper> -->
-../article/pandaStyles ../shared/pandaStyles
+</StyledWrapper> -->../article/pandaStyles
+../shared/pandaStyles ../../styles/shared/pandaStyles
