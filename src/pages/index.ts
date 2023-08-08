@@ -2,15 +2,15 @@ import { css } from "../../styled-system/css";
 
 const Title = css({
   padding: "1rem",
-  marginLeft: "1.5rem",
-  marginRight: "1.5rem",
   fontSize: "1.5rem",
   lineHeight: "2rem",
   textAlign: "center",
-  color: "red",
+  color: "zinc.200",
+  background: "zinc.800",
 });
 
 const Container = css({
+  background: "zinc.200",
   padding: "1rem",
   paddingLeft: "1.5rem",
   paddingRight: "1.5rem",

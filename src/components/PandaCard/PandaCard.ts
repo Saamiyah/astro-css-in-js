@@ -19,19 +19,11 @@ const Title = css({
   fontSize: "1.25rem",
   lineHeight: "1.75rem",
   fontWeight: "700",
-  color: "#374151",
+  color: "gray.800",
 });
 
 const Summary = css({
-  color: "#374151",
+  color: "InfoText",
 });
 
-const Link = css({
-  position: "absolute",
-  top: "0",
-  right: "0",
-  bottom: "0",
-  left: "0",
-});
-
-export { Card, Img, Title, Summary, Link };
+export { Card, Img, Title, Summary };
